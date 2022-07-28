@@ -1,7 +1,6 @@
 .card {
     margin: auto;
     width: 40vw;
-    margin-top: 30vh;
     padding: 10px;
 }
 
@@ -18,17 +17,40 @@ form>div {
     width: 20vw;
 }
 
+.form-control.error {
+    border-color: #E74C3C;
+}
+
+.form-control.success {
+    border-color: green;
+}
+
+div.error {
+    color: #E74C3C;
+}
+
 .name-container {
     display: flex;
     justify-content: space-between;
 }
 
 .name-container2 {
-    display: flex;
     justify-content: left;
 }
 
 .name-container3 {
-    display: flex;
     justify-content: right;
+}
+
+.indent {
+    text-indent: .6em;
+}
+
+img {
+    width: 2.7em;
+    height: 1.7em;
+}
+
+.hide {
+    display: none;
 }

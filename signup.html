@@ -9,28 +9,62 @@
 </head>
 
 <body>
-    <div class="card">
+    <div class="card shadow" style="margin-top: 10vh;">
         <div class="card-body">
-            <h4 class="card-title">Create your account</h4>
-            <form>
+            <h3 class="card-title">Create your account</h3>
+            <h6 class="indent">Login Information</h6>
+            <form action="login.html">
+                <div>
+                    <input class="form-control" id="username" type="text" placeholder="Username" />
+                    <div class="error hide" id="usernameError"></div>
+                </div>
+                <div>
+                    <input class="form-control" id="password" type="password" placeholder="Password" />
+                    <div class="error hide" id="passwordError"></div>
+                </div>
+                <div>
+                    <input class="form-control" id="confirmPassword" type="password" placeholder="Confirm Password" />
+                    <div class="error hide" id="confirmPasswordError"></div>
+                </div>
+
+                <hr />
+
+                <div style="padding: 0px;" class="name-container">
+                    <h6 class="indent name-container2">
+                        Credit Card Information
+                    </h6>
+                    <div style="padding-right: 0.5em;" class="name-container3">
+                        <img class="hide" id="cardImage" />
+                    </div>
+                </div>
+                <div>
+                    <input class="form-control" id="cardholderName" type="text" placeholder="Cardholder Name" />
+                    <div class="error hide" id="cardholderNameError"></div>
+                </div>
+                <div>
+                    <input class="form-control" id="cardNumber" type="text" id="cardNumber" placeholder="Card Number"
+                        maxlength="19" />
+                    <div class="error hide" id="cardNumberError"></div>
+                </div>
                 <div class="name-container">
                     <div class="name-container2">
-                        <input style="width:15vw" class="form-control name-item1" type="text"
-                            placeholder="First Name" />
+                        <input style="width:16.5vw" id="cardExpiry" class="form-control" type="text"
+                            placeholder="MM/YY" />
+                        <div class="error hide" id="cardExpiryError"></div>
                     </div>
                     <div class="name-container3">
-                        <input style="width:15vw" class="form-control name-item2" type="text" placeholder="Last Name" />
+                        <input style="width:16.6vw" id="cardCVV" class="form-control" type="text" maxlength="3"
+                            placeholder="CVV" />
+                        <div class="error hide" id="cardCVVError"></div>
                     </div>
                 </div>
                 <div>
-                    <input class="form-control" type="text" placeholder="Username" />
-                </div>
-                <div>
-                    <input class="form-control" type="password" placeholder="Password" />
+                    <button class="form-control btn btn-primary" disabled="disabled">Sign Up</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="signupValidation.js"></script>
 </body>
 
 </html>
