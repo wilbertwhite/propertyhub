@@ -1,0 +1,47 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: lighter;
+}
+.t1 h1 {
+	font-weight: lighter;
+  	font-size: 35px;
+  	text-align: center;
+  	margin-bottom: 3px;
+} 
+
+.t2 h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: lighter;
+	font-size: 12px;
+	line-height: 0px;
+	text-align: center;
+	margin-top: 0;
+}
+
+.menuBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menuBar li {
+  float: left;
+}
+
+.menuBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuBar li a:hover:not(.active) {
+  background-color: teal;
+}
+
+.active {
+  background-color: orange;
+}
