@@ -1,0 +1,120 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  background: #e8e1cc;
+  padding: 3px;
+
+}
+.t1 h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 3px;
+} 
+
+.t2 h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 0px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.menuBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menuBar li {
+  float: left;
+}
+
+.menuBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menuBar li a:hover:not(.active) {
+  background-color: teal;
+}
+
+.active {
+  background-color: orange;
+}
+
+#parent {
+  color: white;
+}
+
+.card-body {
+    color: white;
+    background-color: #333;
+}
+.card {
+    margin: auto;
+    width: 40vw;
+    padding: 10px;
+}
+
+form>div {
+    padding: 10px;
+}
+
+.card-link {
+    padding: 15px;
+}
+
+.form-control {
+    margin: auto;
+    width: 20vw;
+}
+
+.form-control.error {
+    border-color: #E74C3C;
+}
+
+.form-control.success {
+    border-color: green;
+}
+
+div.error {
+    color: #E74C3C;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-container2 {
+    justify-content: left;
+}
+
+.name-container3 {
+    justify-content: right;
+}
+
+.indent {
+    text-indent: .6em;
+}
+
+span.gbp {
+    float: left;
+    text-align: left;
+}
+
+span.gbp::before {
+    float: left;
+    content: "\00a3"; /* £ */
+    padding: 3px 4px 3px 3px;
+}
+
+span.gbp input {
+     width: 280px !important;
+}
