@@ -13,7 +13,7 @@
         <div class="card-body">
             <h3 class="card-title">Create your account</h3>
             <h6 class="indent">Login Information</h6>
-            <form name="frmSignup" method="post" action="signup.php">
+            <form name="frmSignup" method="post" action="https://codd.cs.gsu.edu/~eruiz11/Project3/signup.php">
                 <div>
                     <input class="form-control" id="username" name="username" type="text" placeholder="Username" />
                     <div class="error hide" id="usernameError"></div>

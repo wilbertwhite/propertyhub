@@ -1,0 +1,24 @@
+//Copy this to create LOGININFO table 
+//Copy everything below this 
+
+CREATE TABLE LOGININFO (
+id int (3) AUTO_INCREMENT NOT NULL ,
+username VARCHAR(30) NOT NULL,
+password VARCHAR (30) NOT NULL,
+PRIMARY KEY (id));
+//stop don't copy this part
+
+
+//Start below here
+CREATE TABLE CREDITCARD (
+id int AUTO_INCREMENT NOT NULL,
+cardholderName VARCHAR(30) NOT NULL,
+cardNumber VARCHAR (19) NOT NULL,
+expDate VARCHAR(4) NOT NULL,
+cvv INT (3) NOT NULL,
+PRIMARY KEY (cardholderName));
+//stop above here
+
+//add this right after adding the too tables! DO NOT ADD ANYTHING TO TABLES UNTIL YOU ADD THIS! 
+ALTER TABLE CREDITCARD ADD FOREIGN KEY (id) REFERENCES LOGININFO(id);
+?>

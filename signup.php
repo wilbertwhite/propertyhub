@@ -1,17 +1,16 @@
 <?php
 //This is where information will need to be updated to connect to mysql on CODD
-$host="127.0.0.2";
-$port=3307;
-$socket="";
-$user="root";
-$password="";
-$dbname="pedalshub";
+$host="localhost";
+$user="eruiz11";
+$password="eruiz11";
+$dbname="eruiz11";
 
-$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
-	or die ('Could not connect to the database server' . mysqli_connect_error());
+$con = new mysqli($host, $user, $password, $dbname);
 
-//$con->close();
-//This is where it ends for connecting to CODD
+if ($con->connect_error){
+	die("Connection failed: " . $con->connect_error);
+}
+echo "Connected successfully!";
 
 // get the post records
 $txtUsername = $_POST['username'];
@@ -22,15 +21,17 @@ $txtCardExpiry = $_POST['cardExpiry'];
 $txtCardCVV = $_POST['cardCVV'];
 
 // database insert SQL code
-$sql1 = "INSERT INTO `logininfo` (`id`, `username`, `password`) VALUES ('0', '$txtUsername', '$txtPassword')";
-$sql2 = "INSERT INTO `creditcard` (`cardholderName`, `cardNumber`, `expDate`, `cvv`) VALUES ('$txtCardholderName', '$txtCardNumber', '$txtCardExpiry', '$txtCardCVV')";
+$sql1 = "INSERT INTO LOGININFO (id, username, password) VALUES ('0', '$txtUsername', PASSWORD('$txtPassword'))";
+$sql2 = "INSERT INTO CREDITCARD (id, cardholderName, cardNumber, expDate, cvv) VALUES ('0','$txtCardholderName', '$txtCardNumber', '$txtCardExpiry', '$txtCardCVV')";
 // insert in database 
 $rs = mysqli_query($con, $sql1);
-
+$rs = mysqli_query($con, $sql2);
 
 if($rs)
 {
-	echo "Account Inserted";
+	echo "Account Inserted\n";
+} else {
+	echo "failed";
 }
 echo "<br>";
 
@@ -39,6 +40,7 @@ if($rs2)
 {
 	echo "Credit Card Inserted";
 }
-//MUST EDIT TO SEND TO THE PROPER PLACE! THIS WOULD BE CODD DETAILS!!!!
-header("Location: /login.html")
+
+
+//$con->close();
 ?>
