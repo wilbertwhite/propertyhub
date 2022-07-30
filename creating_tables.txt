@@ -1,15 +1,15 @@
-//Copy this to create LOGININFO table 
-//Copy everything below this 
+	//Copy this to create LOGININFO table 
+	//Copy everything below this 
 
 CREATE TABLE LOGININFO (
 id int (3) AUTO_INCREMENT NOT NULL ,
 username VARCHAR(30) NOT NULL,
 password VARCHAR (30) NOT NULL,
 PRIMARY KEY (id));
-//stop don't copy this part
+	//stop above here and paste into mysql on codd server
 
 
-//Start below here
+	//Start below here
 CREATE TABLE CREDITCARD (
 id int AUTO_INCREMENT NOT NULL,
 cardholderName VARCHAR(30) NOT NULL,
@@ -17,8 +17,17 @@ cardNumber VARCHAR (19) NOT NULL,
 expDate VARCHAR(4) NOT NULL,
 cvv INT (3) NOT NULL,
 PRIMARY KEY (cardholderName));
-//stop above here
+	//stop above here
 
-//add this right after adding the too tables! DO NOT ADD ANYTHING TO TABLES UNTIL YOU ADD THIS! 
+	//add this right after adding the too tables! DO NOT ADD ANYTHING TO TABLES UNTIL YOU ADD THIS! 
 ALTER TABLE CREDITCARD ADD FOREIGN KEY (id) REFERENCES LOGININFO(id);
+
+CREATE TABLE SELLBIKEINFO (
+id int AUTO_INCREMENT NOT NULL,
+title VARCHAR (30) NOT NULL,
+price VARCHAR (8) NOT NULL,
+description VARCHAR (1024) NOT NULL,
+image VARCHAR (100) NOT NULL,
+PRIMARY KEY (id));
+
 ?>

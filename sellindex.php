@@ -36,20 +36,20 @@
     <div class="card shadow" style="margin-top: 10px;">
       <div class="card-body">
         <h3 class="card-title">List Your Bike for Sale</h3>
-        <form action="buy.html">
+        <form name="frmSignup" method="post" enctype="multipart/form-data" action="https://codd.cs.gsu.edu/~eruiz11/Project3/sell.php">
           
           <div>
-            <input style="width:33vw" class="form-control" id="title" type="card-title" placeholder="Title" required="required">
+            <input style="width:33vw" class="form-control" id="title" name="title" type="card-title" placeholder="Title" required="required">
           </div>
           
           <div>
             <span class="price">
-              <input style="width:33vw" class="form-control" type="number" placeholder="&dollar;0.00" min="0" max="10000" step=".01" value="" name="Price" id="Price" required="required" />
+              <input style="width:33vw" class="form-control" type="number" placeholder="&dollar;0.00" min="0" max="10000" step=".01" value="" name="price" id="price" required="required" />
             </span>
           </div>
           
           <div>
-            <textarea style="width:33vw" class="form-control" id="title" type="card-title" placeholder="Description" required="required"></textarea>
+            <textarea style="width:33vw" class="form-control" id="description" name="description" type="card-title" placeholder="Description" required="required"></textarea>
           </div>
 
           <hr />
@@ -63,11 +63,11 @@
           </div>
           
           <div>
-            <input style="width:33vw" class="form-control" type="file" id="myFile" name="filename" required="required">
+            <input style="width:33vw" class="form-control" type="file" id="img" name="img" >
           </div>
 
           <div style="margin-left: 8.75vw">
-            <button style="width:16.5vw;" class="form-control btn btn-primary" type="submit">Submit</button>
+            <button style="width:16.5vw;" class="form-control btn btn-primary" type="submit" id="submit" name="submit" value="submit">Submit</button>
           </div>
         
         </form>

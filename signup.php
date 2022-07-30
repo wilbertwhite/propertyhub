@@ -1,4 +1,5 @@
 <?php
+include ('dbconfig.php');
 //This is where information will need to be updated to connect to mysql on CODD
 $host = "localhost";
 $user = "eruiz11";
@@ -41,4 +42,5 @@ if ($rs2) {
 
 header("Location: /login.php");
 exit();
+
 //$con->close();
