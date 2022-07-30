@@ -2,10 +2,17 @@ body {
     background: #e8e1cc;
 
 }
+
+.card-title,
+h6 {
+    color: white;
+}
+
 .card-body {
     color: white;
     background-color: #333;
 }
+
 .card {
     margin: auto;
     width: 40vw;
@@ -30,7 +37,7 @@ form>div {
 }
 
 .form-control.success {
-    border-color: green;
+    border-color: rgb(70, 211, 70);
 }
 
 div.error {

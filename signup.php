@@ -1,13 +1,13 @@
 <?php
 //This is where information will need to be updated to connect to mysql on CODD
-$host="localhost";
-$user="eruiz11";
-$password="eruiz11";
-$dbname="eruiz11";
+$host = "localhost";
+$user = "eruiz11";
+$password = "eruiz11";
+$dbname = "eruiz11";
 
 $con = new mysqli($host, $user, $password, $dbname);
 
-if ($con->connect_error){
+if ($con->connect_error) {
 	die("Connection failed: " . $con->connect_error);
 }
 echo "Connected successfully!";
@@ -27,8 +27,7 @@ $sql2 = "INSERT INTO CREDITCARD (id, cardholderName, cardNumber, expDate, cvv) V
 $rs = mysqli_query($con, $sql1);
 $rs = mysqli_query($con, $sql2);
 
-if($rs)
-{
+if ($rs) {
 	echo "Account Inserted\n";
 } else {
 	echo "failed";
@@ -36,11 +35,10 @@ if($rs)
 echo "<br>";
 
 $rs2 = mysqli_query($con, $sql2);
-if($rs2)
-{
+if ($rs2) {
 	echo "Credit Card Inserted";
 }
 
-
+header("Location: /login.php");
+exit();
 //$con->close();
-?>

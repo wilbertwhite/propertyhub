@@ -8,21 +8,20 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
-<body     style="background: #e8e1cc; color: white;">
+<body style="background: #e8e1cc; color: white;">
     <div class="card shadow" style="text-align:center; margin-top: 30vh;">
         <div class="card-body">
             <h4 class="card-title">Log In</h4>
             <form>
                 <div>
-                    <input style="margin:auto; width: 20vw;" class="form-control" type="text" placeholder="Username" />
+                    <input style="background-color: #333; color: white; margin:auto; width: 20vw;" class="form-control" type="text" placeholder="Username" />
                 </div>
                 <div>
-                    <input style="margin:auto; width: 20vw;" class="form-control" type="password"
-                        placeholder="Password" />
+                    <input style="background-color: #333; color: white; margin:auto; width: 20vw;" class="form-control" type="password" placeholder="Password" />
                 </div>
             </form>
             <div class="card-link">
-                Don't have an account? <a href="signup.html">Sign Up</a>
+                Don't have an account? <a href="signupindex.php">Sign Up</a>
             </div>
         </div>
     </div>
