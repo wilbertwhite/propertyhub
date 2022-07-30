@@ -1,7 +1,7 @@
 <?php
 include ('dbconfig.php');
 $query="select * from SELLBIKEINFO";
-$result=mysqli_query($query);
+$result=mysqli_query($con,$query);
 ?>
 <html lang="en">
 <head>
@@ -33,19 +33,18 @@ $result=mysqli_query($query);
 <div id="parent">
 	<div class="container-fluid">
 	<?php
-		while($rows=mysqli_fetch_assoc($result))
+	while($rows=mysqli_fetch_assoc($result))
 		{
-	?>
-	
-    <div class="card" style="width:300px; background-color: #333">
-      <?php echo <img src="data:image;base64,' .base64_decode($rows['image']).' " alt="Image" style="width:100%"> ?>
-      <div class="card-body">
-        <h4 class="card-title"><?php echo $row['title']?></h4>
-        <p class="card-text"><?php echo $row['price']?></p>
-        <a href="#" class="btn btn-primary"><?php echo $row['description']?></a>
+			?>
+    <div class="card" style="display:flex; align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px;">
+      <?php echo '<img src="data:image;base64,'.base64_decode($rows['image']).' " alt="Image" >'; ?>
+      <div class="card-body" >
+        <h4 class="card-title"><?php echo $rows['title']?></h4>
+        <p class="card-text" style="justifiy-content:center;">Price: $<?php echo $rows['price']?></p>
+        <a href="#" class="btn btn-primary" ><?php echo $rows['description']?></a>
       </div>
     </div>
-	<?php
+	  <?php
 		}
 	?>
   </div>
