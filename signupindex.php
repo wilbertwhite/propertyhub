@@ -1,3 +1,7 @@
+<?php
+session_start();
+unset($_SESSION['account_success']);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +17,15 @@
         <div class="card-body">
             <h3 class="card-title">Create your account</h3>
             <h6 class="indent">Login Information</h6>
-            <form name="frmSignup" method="post" action="https://codd.cs.gsu.edu/~eruiz11/Project3/signup.php">
+            <form name="frmSignup" method="post" action="https://wwhite16@codd.cs.gsu.edu/~wwhite16/WP/P/3/signup.php">
+                <div>
+                    <select style="color:white; background-color: #333;" class="form-select" id="accountType" name="accountType">
+                        <option>Account Type</option>
+                        <option value="buyer">Buyer</option>
+                        <option value="seller">Seller</option>
+                    </select>
+                    <div style="padding: 0px;" class="error hide" id="accountTypeError"></div>
+                </div>
                 <div>
                     <input style="color:white; background-color: #333;" class="form-control" id="username" name="username" type="text" placeholder="Username" />
                     <div class="error hide" id="usernameError"></div>

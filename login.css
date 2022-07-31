@@ -32,11 +32,13 @@ form>div {
     width: 20vw;
 }
 
-.form-control.error {
+.form-control.error,
+.form-select.error {
     border-color: #E74C3C;
 }
 
-.form-control.success {
+.form-control.success,
+.form-select.success {
     border-color: rgb(70, 211, 70);
 }
 

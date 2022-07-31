@@ -5,6 +5,7 @@ CREATE TABLE LOGININFO (
 id int (3) AUTO_INCREMENT NOT NULL ,
 username VARCHAR(30) NOT NULL,
 password VARCHAR (30) NOT NULL,
+accountType VARCHAR(30) NOT NULL,
 PRIMARY KEY (id));
 	//stop above here and paste into mysql on codd server
 
@@ -16,7 +17,7 @@ cardholderName VARCHAR(30) NOT NULL,
 cardNumber VARCHAR (19) NOT NULL,
 expDate VARCHAR(4) NOT NULL,
 cvv INT (3) NOT NULL,
-PRIMARY KEY (cardholderName));
+PRIMARY KEY (id));
 	//stop above here
 
 	//add this right after adding the too tables! DO NOT ADD ANYTHING TO TABLES UNTIL YOU ADD THIS! 

@@ -6,6 +6,7 @@ var cardNumber = document.getElementById("cardNumber");
 var cardExpiry = document.getElementById("cardExpiry");
 var cardCVV = document.getElementById("cardCVV");
 var signUpButton = document.getElementsByTagName("button")[0];
+var accountType = document.getElementById("accountType");
 
 var cardDetected = false;
 
@@ -18,6 +19,7 @@ cardholderName.oninput = function () { isNotEmpty(cardholderName.id) };
 cardNumber.oninput = function () { isValidCard() };
 cardExpiry.oninput = function () { isNotEmpty(cardExpiry.id) };
 cardCVV.oninput = function () { isNotEmpty(cardCVV.id) };
+accountType.onchange = function () { isValidAccountType() };
 
 /**
 * if corresponding field is not empty, display green border around input field,  
@@ -81,6 +83,24 @@ function isConfirmPassword() {
         confirmPassword.classList.add("error");
 
         message.innerHTML = "Passwords must match.";
+        message.classList.remove("hide");
+    }
+    checkCompletion();
+}
+
+function isValidAccountType() {
+    let message = document.getElementById("accountTypeError");
+
+    if (accountType.value == "seller" || accountType.value == "buyer") {
+        accountType.classList.remove("error");
+        accountType.classList.add("success");
+
+        message.classList.add("hide");
+    } else {
+        accountType.classList.remove("success");
+        accountType.classList.add("error");
+
+        message.innerHTML = "Please select an account type.";
         message.classList.remove("hide");
     }
     checkCompletion();
@@ -181,7 +201,8 @@ function checkCompletion() {
         cardholderName.classList.contains("success") &&
         cardNumber.classList.contains("success") &&
         cardExpiry.classList.contains("success") &&
-        cardCVV.classList.contains("success")
+        cardCVV.classList.contains("success") &&
+        accountType.classList.contains("success")
     ) {
         signUpButton.disabled = false;
     } else signUpButton.disabled = true;
