@@ -22,13 +22,13 @@
     </div>
     <div class="menuBar">
       <ul>
-        <li><a href="pedalsHub.html">Home</a></li>
-        <li><a href="buy.html">Buy</a></li>
-        <li><a href="sell.html">Sell</a></li>
-        <li style="float:right"><a class="active" href="login.html">Login</a></li>
+      <li><a href="pedalsHub.html">Home</a></li>
+        <li><a href="buy.php">Buy</a></li>
+        <li><a href="sellindex.php">Sell</a></li>
+        <li style="float:right"><a class="active" href="loginindex.php">Login</a></li>
         <li style="float:right">&nbsp</li>
-        <li style="float:right"><a class="active" href="login.html">Logout</a></li>
-      </ul>
+        <li style="float:right"><a class="active" href="loginindex.php">Logout</a></li>
+    </ul>
     </div><br>
 
 

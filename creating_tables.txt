@@ -4,7 +4,7 @@
 CREATE TABLE LOGININFO (
 id int (3) AUTO_INCREMENT NOT NULL ,
 username VARCHAR(30) NOT NULL,
-password VARCHAR (30) NOT NULL,
+password VARCHAR (100) NOT NULL,
 accountType VARCHAR(30) NOT NULL,
 PRIMARY KEY (id));
 	//stop above here and paste into mysql on codd server
