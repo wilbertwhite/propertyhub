@@ -47,6 +47,15 @@ $result=mysqli_query($con,$query);
 	  <?php
 		}
 	?>
+	<div class="card" style=" align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px; height:420px;">
+      <a href="https://codd.cs.gsu.edu/~eruiz11/Project3/sellindex.php">
+		<div id="music" class="nav" style="display:flex; align-items: center; justifiy-content:center;" >
+			<img src="https://codd.cs.gsu.edu/~eruiz11/Project3/images/pngwing.com.png" style="width:300; height:300;">
+		</div>
+	  </a>
+	</div>
+    </div>
+    </div>
   </div>
 </div>
 
