@@ -22,11 +22,11 @@ $result=mysqli_query($con,$query);
   <div class="menuBar">
     <ul>
       <li><a href="pedalsHub.html">Home</a></li>
-        <li><a href="buy.html">Buy</a></li>
-        <li><a href="sell.html">Sell</a></li>
-        <li style="float:right"><a class="active" href="login.html">Login</a></li>
+        <li><a href="buy.php">Buy</a></li>
+        <li><a href="sellindex.php">Sell</a></li>
+        <li style="float:right"><a class="active" href="loginindex.php">Login</a></li>
         <li style="float:right">&nbsp</li>
-        <li style="float:right"><a class="active" href="login.html">Logout</a></li>
+        <li style="float:right"><a class="active" href="loginindex.php">Logout</a></li>
     </ul>
   </div><br>
  
@@ -36,7 +36,7 @@ $result=mysqli_query($con,$query);
 	while($rows=mysqli_fetch_assoc($result))
 		{
 			?>
-    <div class="card" style="display:flex; align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px;">
+    <div class="card" style="color:white; display:flex; align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px; height:420px;">
       <img src="<?php echo $rows['image']; ?>" alt= "Image" style="width:200px; height:200px;">
       <div class="card-body" >
         <h4 class="card-title"><?php echo $rows['title']?></h4>
@@ -54,7 +54,6 @@ $result=mysqli_query($con,$query);
 		</div>
 	  </a>
 	</div>
-    </div>
     </div>
   </div>
 </div>
