@@ -50,4 +50,10 @@ body {
 
 #parent {
   color: white;
+  width: 90%;
+  height: auto;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
