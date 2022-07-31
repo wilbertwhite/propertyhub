@@ -36,7 +36,7 @@ $result=mysqli_query($con,$query);
 	while($rows=mysqli_fetch_assoc($result))
 		{
 			?>
-    <div class="card" style="display:flex; align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px;">
+    <div class="card" style="color:white; display:flex; align-items: center; justifiy-content:center; width:21%; background-color: #333; float:left; padding:50px; margin:10px; height:420px;">
       <img src="<?php echo $rows['image']; ?>" alt= "Image" style="width:200px; height:200px;">
       <div class="card-body" >
         <h4 class="card-title"><?php echo $rows['title']?></h4>
@@ -54,7 +54,6 @@ $result=mysqli_query($con,$query);
 		</div>
 	  </a>
 	</div>
-    </div>
     </div>
   </div>
 </div>
