@@ -31,5 +31,5 @@ if ($_FILES["img"]["error"] > 0)
 	echo 'File name not stored in database';
 	}
 }
-header('Location: https://codd.cs.gsu.edu/~eruiz11/Project3/buy.html');
+header('Location: https://codd.cs.gsu.edu/~eruiz11/Project3/buy.php');
 ?>
