@@ -1,41 +1,31 @@
 <?php
+include('dbconfig.php');
 session_start();
-?>
+unset($_SESSION["account_success"]);
 
-<!DOCTYPE html>
-<html>
+//This is where information will need to be updated to connect to mysql on CODD
+$host = "localhost";
+$user = "eruiz11";
+$password = "eruiz11";
+$dbname = "eruiz11";
 
-<head>
-    <title>Log In</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-</head>
+$con = new mysqli($host, $user, $password, $dbname);
 
-<body style="background: #e8e1cc; color: white;">
-    <div class="card shadow" style="text-align:center; margin-top: 30vh;">
-        <div class="card-body">
-            <h4 class="card-title">Log In</h4>
-            <?php
-            if (isset($_SESSION["account_success"])) {
-                if ($_SESSION["account_success"] == true) {
-                    echo ("<div>Account successfully created!</div>");
-                }
-            }
-            ?>
-            <form>
-                <div>
-                    <input style="background-color: #333; color: white; margin:auto; width: 20vw;" class="form-control" type="text" placeholder="Username" />
-                </div>
-                <div>
-                    <input style="background-color: #333; color: white; margin:auto; width: 20vw;" class="form-control" type="password" placeholder="Password" />
-                </div>
-            </form>
-            <div class="card-link">
-                Don't have an account? <a href="signupindex.php">Sign Up</a>
-            </div>
-        </div>
-    </div>
-</body>
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+echo "Connected successfully!";
 
-</html>
+// get the post records
+$txtUsername = $_POST['username'];
+$txtPassword = $_POST['password'];
+
+//find username in database according to what user entered
+$sql = "SELECT username FROM LOGININFO WHERE username = '$txtUsername'";
+$rs = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($rs);
+
+//compare username entered to the query result
+if ($txtUsername == $row["username"]) {
+    echo ("username found");
+}

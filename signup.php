@@ -52,6 +52,6 @@ if ($rs2) {
 	$_SESSION["credit_success"] = false;
 }
 
-header("Location: login.php");
+header("Location: loginindex.php");
 exit();
 //$con->close();
